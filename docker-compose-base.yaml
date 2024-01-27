@@ -1,0 +1,22 @@
+version: '24.0'
+
+services:
+  base:
+    build:
+      context: .
+      target: base
+    image: node_base
+    volumes:
+      - type: bind
+        source: ./src
+        target: /src
+    entrypoint: [ "npx", "-y", "create-next-app", "." ]
+    command: [ "--ts", "--eslint", "--app", "--tailwind", "--no-src-dir", "--import-alias", "@/*" ]
+  installer:
+    image: node_base
+    volumes:
+      - type: bind
+        source: ./src
+        target: /src
+    entrypoint: [ "npm", "install" ]
+    command: [ "prettier", "eslint-config-prettier" ]
