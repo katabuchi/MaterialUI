@@ -19,4 +19,4 @@ services:
         source: ./src
         target: /src
     entrypoint: [ "npm", "install" ]
-    command: [ "prettier", "eslint-config-prettier" ]
+    command: [ "prettier", "eslint-config-prettier", "@mui/material", "@emotion/react", "@emotion/styled",  "@mui/material-nextjs", "@emotion/cache" ]
