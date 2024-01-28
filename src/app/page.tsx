@@ -1,12 +1,12 @@
 "use client"
 
-import { AppBar, BottomNavigation, BottomNavigationAction, IconButton, Paper, Toolbar, Typography } from "@mui/material";
-import MenuIcon from '@mui/icons-material/Menu';
+import { BottomNavigation, BottomNavigationAction, Paper } from "@mui/material";
 import FaceIcon from '@mui/icons-material/Face';
 import WorkIcon from '@mui/icons-material/Work';
 import CreateIcon from '@mui/icons-material/Create';
 import EmailIcon from '@mui/icons-material/Email';
 import { SyntheticEvent, useState } from "react";
+import AppBar from "./components/AppBar/AppBar";
 
 export default function Home() {
   const [value, setValue] = useState("about")
@@ -16,17 +16,7 @@ export default function Home() {
 
   return (
     <main className="">
-      <AppBar position="static">
-        <Toolbar variant="dense" >
-          <IconButton edge="start" color="inherit" aria-aria-label="menu" sx={{ mr: 2 }}>
-            <MenuIcon />
-          </IconButton>
-          <Typography>
-            Sample MUI
-          </Typography>
-        </Toolbar>
-      </AppBar>
-
+      <AppBar />
 
       <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
         <BottomNavigation
