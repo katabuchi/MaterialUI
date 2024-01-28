@@ -1,2 +1,2 @@
 # What
-Try [MAU](https://mui.com/) with Next.js
+Try [MUI](https://mui.com/) with Next.js
